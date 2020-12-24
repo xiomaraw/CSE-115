@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <!-- CSE 115 Project 2
+    Xiomara Watler
+    November 16, 2019
+    -->
+    <title>Xiomara Watler's CSE 115 Project</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      body {
+        background-color: #ffffff;
+        font-family: Didot, serif;
+        line-height: 1.0em;
+        }
+
+        h1{
+        background-color: #165fcc;
+        color: #ffffff;
+        letter-spacing: 0.1em;
+        line-height: 2.0em;
+        text-indent: 1.2em;
+        }
+
+        h2{
+        color: #ffffff;
+        background-color: #165fccb4;
+        letter-spacing: 0.1em;
+        line-height: 1.5em;
+        text-indent: 1.2em;
+        }
+        
+        h3{
+        color: #ffffff;
+        background-color: #165fcc50;
+        letter-spacing: 0.1em;
+        line-height: 1.5em;
+        text-indent: 1.2em;
+        }
+
+        p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        }
+    </style>
+  </head>
+    <body onload="getData();">
+    <center>
+    <h1>Los Angeles Animal Intake Analysis (2011-2013)</h1>
+      <p>This website is a collection of animal intake data from the Department of Animal Services in Los Angeles from 2011 to 2013. This data was retrieved from <a href = "https://catalog.data.gov/dataset/animal-services-intake-data-57f73" target="_blank"> data.gov.</a></p>
+    <h2>Data Analysis</h2>
+    <!-- Pie Chart HTML -->
+    <h3>Amount of Animals Admitted per Year</h3>
+      <p> Displays the total amount of animals admitted into an animal shelter in the years 2011, 2012, and 2013. </p>
+        <button id = "dbutton" onClick = "dogpost();">Dogs</button>
+        <button id = "cbutton" onClick = "catpost();">Cats</button>
+        <button id = "bbutton" onClick = "birdpost();">Birds</button>
+        <button id = "obutton" onClick = "otherpost();">Wildlife</button>
+        <div id="amt"></div>
+        <div id="dog"></div>
+        <div id="cat"></div>
+        <div id="bird"></div>
+        <div id="other"></div>
+    <!-- Table HTML -->
+    <h3>Amount of Animals Admitted in a Los Angeles Shelter per a Given Year</h3>
+      <p>Displays how many times an animal is admitted into one of Los Angeles Animal Shelters (East and West Valley, South and West Los Angeles, Harbor, and North Centra) from 2011 to 2013.</p>
+        <button id = "button11" onClick = "table11();">2011</button>
+        <button id = "button12" onClick = "table12();">2012</button>
+        <button id = "button13" onClick = "table13();">2013</button>
+        <div id = "graph"></div>
+        <div id="2011graph"></div>
+        <div id="2012graph"></div>
+        <div id="2013graph"></div>
+
+    <script src="animals.js"></script>  
+    </center>
+  </body>
+</html>
